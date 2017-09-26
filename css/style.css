@@ -1,0 +1,159 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+html { 
+  background: url(../img/hidden.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* sidebar */
+.sidebar {
+    background: rgba(255, 255, 255,0.8);
+    width: 200px;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: -200px;
+    transition: left 0.3s linear;
+}
+
+.sidebar.visible {
+    left: 0px;
+    transition: left 0.3s linear;
+}
+
+.sidebar .logo {
+    font-family: 'Orbitron', sans-serif;
+    text-decoration: none;
+    color: #000;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: block;
+    text-align: center;
+    padding: 12px 0px 10px 0px;
+    border-bottom: 1px solid #8D929B;
+}
+
+.sidebar ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.sidebar ul li {
+    list-style: none;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #8D929B;
+    display: block;
+    width: 180px;
+    padding: 10px;
+}
+
+.sidebar ul li a:hover {
+    color: #5d7caf;
+}
+
+.sidebar-btn {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 15px;
+    cursor: pointer;
+    margin: 10px 20px 20px 20px; /* original 20px */
+    position: absolute;
+    top: 0px;
+    right: -70px;
+    border: 1px solid rgba(255, 255, 255, 0.4); /* circle border */
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4); /* border end */
+}
+
+.sidebar-btn .btn {
+    height: 2px;
+    border-radius: 20%;
+    background: rgba(255, 255, 255,0.9);
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* About me section */
+.about-me {
+    width: 400px;
+    height: 450px;
+    background-color: rgba(0,0,0,0.6);
+    padding: 30px;
+    margin: 0 auto;
+    color: #FFF;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.about-me .self-image {
+    width: 144px;
+    height: 174px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.about-me h1 {
+    font-weight: lighter;
+    font-size: 28px;
+}
+
+.about-me h4 {
+    font-weight: lighter;
+}
+
+.about-me p {
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+/* social media icons*/
+.social-media li{
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    padding-right: 40px;
+}
+
+.social-media:hover {
+    cursor: pointer;
+}
+
+.social-media li a {
+    color: #FFF;
+}
+
+.social-media li a:hover {
+    color: #5d7caf;
+}
+
+
+/* for mobile */
+@media (max-width: 450px) {
+    .about-me {
+    font-family: 'Roboto', sans-serif;
+    width: 80%;
+    height: auto;
+    background-color: rgba(0,0,0,0.6);
+    padding: 30px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    }
+}
