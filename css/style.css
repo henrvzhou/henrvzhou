@@ -121,7 +121,7 @@ a:focus, a:hover {
 
   #mainNav .nav-link.active {
     outline: none;
-    background-color: rgba(255, 255, 255, 0.3); 
+    background-color: rgba(205, 147, 82, 0.7); /* 255, 255, 255, 03 */
   }
 
   #mainNav .nav-link.active:hover {
@@ -138,7 +138,7 @@ a:focus, a:hover {
   padding: 200px 0;
   text-align: center;
   color: #FFF;
-  background: url("../img/retro2.png") no-repeat bottom center scroll;
+  background: url("../img/cn2.jpeg") no-repeat bottom center scroll;
   background-color: #000;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -191,8 +191,8 @@ a:focus, a:hover {
 .about-title {
   text-align: left;
   float: left;
-  font-size: 50px;
-  padding: 0 0 10px 10px;
+  font-size: 45px;
+  padding: 0 0 1px 10px;
   margin: 0 5px 10px 10px;
 }
 
@@ -201,7 +201,20 @@ a:focus, a:hover {
 }
 
 .progress-container {
-  padding: 10px;
+  padding: 20px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  box-shadow: 2px 2px 40px #000;
+  margin-top: 80px;
+}
+
+.progress-label-left {
+  float: left;
+}
+
+.progress-label-right {
+  text-align: right;
+  margin-bottom: 0px;
 }
 
 .progress-bar {
@@ -225,7 +238,7 @@ a:focus, a:hover {
 
 /* Projects page */
 #projects {
-  background-color: rgb(17, 18, 22); /* #131414 */
+  background-color: rgb(2, 26, 54); /* #131414; retro2[rgb(17, 18, 22)]*/
   color: #FFF;
   padding-top: 50px;
 }
@@ -321,7 +334,6 @@ ul.banner-social-buttons {
 }
 
 
-
 footer {
   background-color: #000; /* #535456 */
   padding: 50px 0; 
@@ -355,4 +367,11 @@ img::-moz-selection {
 
 body {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2); 
+}
+
+
+@media (max-width: 320px) {
+  .about-title {
+    font-size: 32px;
+  }
 }
