@@ -1,377 +1,280 @@
-/*!
- * Start Bootstrap - Grayscale v4.0.0-beta (http://startbootstrap.com/template-overviews/grayscale)
- * Copyright 2013-2017 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/master/LICENSE)
- */
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
 
-@import url(https://fonts.googleapis.com/css?family=Abril+Fatface|Acme|Orbitron:700);
-@import url(https://fonts.googleapis.com/css?family=Cabin:700);
-
-body {
-  font-family: 'Orbitron', sans-serif;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  letter-spacing: 1px;
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cabin', sans-serif;
 }
 
-html {
-  width: 100%;
-  height: 100%; 
+section {
+    padding-top: 1px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  margin: 0 0 35px;
-  letter-spacing: 1px;
-  text-transform: uppercase; 
+/*--------------------------- Navbar --------------------------- */
+.navbar {
+    width: 100%;
+    height: 58px;
+    background: transparent;
+    position: fixed;
+    z-index: 100;
 }
 
-p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 0 0 25px; 
+#brand-logo {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    top: 12px;
+    left: 100px;
 }
 
-@media (min-width: 768px) {
-  p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin: 0 0 35px; 
-  } 
+#brand-logo img {
+    width: 40px;
+    height: 23px;
 }
 
-a {
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  color: #42DCA3; 
+.navbar-nav {
+    float: right;
 }
 
-a:focus, a:hover {
-  text-decoration: none;
-  color: #1d9b6c; 
+.navbar-nav a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    top: 18px;
+    right: 100px;
+    font-weight: bold;
 }
 
-/* Navbar */
-#mainNav {
-  font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  margin-bottom: 0;
-  text-transform: uppercase;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  background-color: #000; 
+#projects-btn {
+    margin-left: 15px;
 }
 
-#mainNav .navbar-toggler {
-  font-size: 14px;
-  padding: 11px;
-  color: #FFF;
-  border: 1px solid #FFF; 
+/*--------------------------- Landing Page --------------------------- */
+#landing-page {
+    height: 100vh;
+    background-color: #536684; /* #963d3d */
 }
 
-#mainNav .navbar-brand {
-  font-weight: 700; 
+.info-wrapper {
+    margin: 0 auto;
+    width: 500px;
+    padding-top: 50px;
 }
 
-#mainNav .navbar-brand img {
-  width: 80px;
-  height: 25px;
-}
-
-#mainNav a {
-  color: #FFF; 
-}
-
-#mainNav .navbar-nav .nav-item {
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out; 
-}
-
-#mainNav .navbar-nav .nav-item:hover {
-  color: fade(#FFF, 80%);
-  outline: none;
-  background-color: transparent; 
-}
-
-#mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
-  outline: none;
-  background-color: transparent; 
-}
-
-@media (min-width: 992px) {
-  #mainNav {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
-    -moz-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
-    transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
-    letter-spacing: 1px;
-    border-bottom: none;
-    background: transparent; 
-  }
-
-  #mainNav.navbar-shrink {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    background: #000; 
-  }
-
-  #mainNav .nav-link.active {
-    outline: none;
-    background-color: rgba(76, 116, 207, 0.5); /* 255, 255, 255, 03; 205, 147, 82, 0.7 */
-  }
-
-  #mainNav .nav-link.active:hover {
-    color: #FFF; 
-  } 
-}
-/* Navbar end */
-
-/* Landing Page */
-.masthead {
-  display: table;
-  width: 100%;
-  height: auto;
-  padding: 200px 0;
-  text-align: center;
-  color: #FFF;
-  background: url("../img/cn2.jpeg") no-repeat bottom center scroll;
-  background-color: #000;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; 
-}
-
-.masthead .intro-body {
-  display: table-cell;
-  vertical-align: middle; 
-}
-
-.masthead .intro-body .brand-heading {
-  font-size: 50px; 
-}
-
-.masthead .intro-body .intro-text {
-  font-size: 18px; 
+#name-title {
+    text-align: center;
+    font-size: 80px;
+    font-weight: bold;
+    color: #fff;
 }
 
 .page-divider {
-  border: 2px #FFF solid;
-  width: 250px;
-  vertical-align: center;
+    margin-top: -35px;
+    width: 400px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 10px;
 }
 
-@media (min-width: 768px) {
-  .masthead {
-    height: 100%;
-    padding: 0; 
-  }
-  .masthead .intro-body .brand-heading {
-    font-size: 80px; 
-  }
-  .masthead .intro-body .intro-text {
-    font-size: 22px; 
-  }
-  .page-divider {
-    border: 2px #FFF solid;
-    width: 300px;
-    vertical-align: center;
-  } 
+#job-title {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 30px;
 }
 
-/* About page */
-/*#about {
-  height: 100vh;
-}*/
-
-.about-title {
-  text-align: left;
-  float: left;
-  font-size: 45px;
-  padding: 0 0 1px 10px;
-  margin: 0 5px 10px 10px;
+#issa-me {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #fff;
 }
 
-.about-paragraph {
-  text-align: left;
+/*--------------------------- About Page --------------------------- */
+#about {
+    background-color: #fff;
 }
 
+.about-wrapper {
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+#about-title {
+    float: left;
+    text-align: left;
+    font-weight: bold;
+    font-size: 45px;
+    padding: 0px 10px 5px 0px;
+    margin: -3px 0px -5px 0px;
+}
+
+#about-text {
+    font-family: 'Orbitron', sans-serif;
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    word-spacing: 5px;
+}
+
+/* Progress */
 .progress-container {
-  padding: 20px;
-  border: 1px solid #000;
-  border-radius: 10px;
-  box-shadow: 2px 2px 40px #000;
-  margin-top: 80px;
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 2px 2px 40px #000;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#current-skills {
+    text-align: center;
 }
 
 .progress-label-left {
-  float: left;
+    float: left;
 }
-
+  
 .progress-label-right {
-  text-align: right;
-  margin-bottom: 0px;
+    text-align: right;
+    margin-bottom: 0px;
 }
 
 .progress-bar {
-  background-color: rgb(32, 35, 51); /* rgb(32, 35, 51) */
+    background-color: #000;;
+    border-radius: 13px;
+    padding: 5px;
+    margin-top: 5px;
 }
 
-#language-header {
-  text-align: left;
-  margin-bottom: -2px;
+#html-progress {
+    width: 80%;
+    background-color: #536684;
+    height: 15px;
+    border-radius: 10px;
 }
 
-#frameworks-header {
-  text-align: left;
-  margin-bottom: -2px;
+#css-progress {
+    width: 60%;
+    background-color: #536684;
+    height: 15px;
+    border-radius: 10px;
 }
 
-#design-header {
-  text-align: left;
-  margin-bottom: -2px;
+#js-progress {
+    width: 30%;
+    background-color: #536684;
+    height: 15px;
+    border-radius: 10px;
 }
 
-/* Projects page */
+#java-progress {
+    width: 50%;
+    background-color: #536684;
+    height: 15px;
+    border-radius: 10px;
+}
+
+#python-progress {
+    width: 60%;
+    background-color: #536684;
+    height: 15px;
+    border-radius: 10px;
+}
+
+#bootstrap-progress {
+    width: 40%;
+    background-color: #536684;
+    height: 15px;
+    border-radius: 10px;
+}
+
+#prototyping-progress {
+    width: 80%;
+    background-color: #536684;
+    height: 15px;
+    border-radius: 10px;
+}
+
+/*--------------------------- Projects Page --------------------------- */
 #projects {
-  background-color: rgb(11, 43, 76); /* #131414; retro2[rgb(17, 18, 22)]; 2 26 54*/
-  color: #FFF;
-  padding-top: 50px;
+    background-color: #536684;
+    height: 100vh;
 }
 
-.portfolio-item {
-  margin-top: 20px;
+#projects-title {
+    font-size: 35px;
+    text-align: center;
+    color: #fff;
+    margin-top: 60px;
 }
 
-.card-title a {
-  color: #000;
+.projects-wrapper {
+    width: 1100px;
+    margin: 0 auto;
+    margin-top: 50px;
 }
 
-.card-body p {
-  color: #000;
+.project-img {
+    width: 310px;
+    height: auto;
+    padding: 5px 6px 5px 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: inline-grid;
+    margin-bottom: 10px;
 }
 
-.btn-circle {
-  font-size: 26px;
-  width: 55px;
-  height: 55px;
-  margin-top: 15px;
-  line-height: 38px;
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  color: #FFF;
-  border: 2px solid #FFF;
-  border-radius: 100% !important;
-  background: transparent; 
+.project-gap {
+    margin-right: 48px;
 }
 
-.btn-circle:focus, .btn-circle:hover {
-  color: #FFF;
-  outline: none;
-  background: rgba(255, 255, 255, 0.1); 
+.project-img h2 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
 }
 
-.content-section {
-  padding-top: 150px;
-  padding-bottom: 150px; 
+.project-img p {
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
 }
 
-@media (min-width: 992px) {
-  .content-section {
-    padding-top: 200px;
-    padding-bottom: 200px; 
-  }
-}
-
-.btn {
-  font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  text-transform: uppercase;
-  border-radius: 0; 
-}
-
-.btn-default {
-  color: #42DCA3;
-  border: 1px solid #42DCA3;
-  background-color: transparent; 
-}
-
-.btn-default:focus, .btn-default:hover {
-  color: #000;
-  border: 1px solid #42DCA3;
-  outline: none;
-  background-color: #42DCA3; 
-}
-
-ul.banner-social-buttons {
-  margin-top: 0; 
-}
-
-@media (max-width: 1199px) {
-  ul.banner-social-buttons {
-    margin-top: 15px; 
-  } 
-}
-
-@media (max-width: 767px) {
-  ul.banner-social-buttons li {
+.project-img img{
+    width: 310px;
+    height: 210px;
     display: block;
-    margin-bottom: 20px;
-    padding: 0; 
-  }
-
-  ul.banner-social-buttons li:last-child {
-    margin-bottom: 0; 
-  } 
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 1px solid #000;
 }
 
-
-footer {
-  background-color: #000; /* #535456 */
-  padding: 50px 0; 
+/*--------------------------- Footer --------------------------- */
+#page-ends {
+    width: 100%;
+    height: 70px;
+    background-color: #000;
+    padding-top: 1px;
 }
 
-footer p {
-  font-size: 14px;
-  margin: 0; 
-  color: #fff;
-}
-
-::-moz-selection {
-  background: #fcfcfc;
-  background: rgba(255, 255, 255, 0.2);
-  text-shadow: none; 
-}
-
-::selection {
-  background: #fcfcfc;
-  background: rgba(255, 255, 255, 0.2);
-  text-shadow: none; 
-}
-
-img::selection {
-  background: transparent; 
-}
-
-img::-moz-selection {
-  background: transparent; 
-}
-
-body {
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2); 
-}
-
-
-@media (max-width: 320px) {
-  .about-title {
-    font-size: 32px;
-  }
+#cp-hz {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    color: #fff;
+    background-color: #000;
 }
